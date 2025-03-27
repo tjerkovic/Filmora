@@ -1,0 +1,310 @@
+/* Opći stilovi */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+  
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+  
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(85, 85, 85, 0.8);
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+}
+  
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    background-color: #777;
+}
+  
+.hamburger:hover + ul,
+  nav ul:hover {
+    display: block;
+}
+
+.menu_text {
+    font-size: 24px;
+    margin: 0; 
+    padding: 5px; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%; 
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 70px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #2980b9;
+    width: 99%;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.menu:hover .dropdown-content {
+    display: block; 
+    opacity: 1;
+}
+
+.dropdown-content li {
+    margin: 8px 0;
+}
+
+.dropdown-content li:hover {
+    background-color: #222;
+}
+
+.dropdown-content a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #ecf0f1;
+}
+main {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    flex-wrap: nowrap; 
+    justify-content: center; 
+    padding-left: 20px;
+}
+
+section[aria-label="Ugrađeni sadržaj"] {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 480px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  @media (max-width: 600px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    section[aria-label="Ugrađeni sadržaj"] {
+      width: 100%;
+    }
+  }
+
+
+.slika1{
+    max-width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.slika2{
+    max-width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.slika3{
+    max-width: 90%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.content-container {
+	display: flex;
+	flex-wrap: wrap; /* omogućava prilagodbu kod manjih ekrana */
+	justify-content: space-between;
+}
+
+table {
+	width: 65%; /* Tablica zauzima 65% širine */
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid #ccc;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+aside {
+	width: 30%; /* Slika zauzima 30% širine */
+	padding: 20px;
+	text-align: center;
+}
+
+picture img {
+	width: 100%; /* Slika se prilagođava širini */
+	height: auto;
+	border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+	.content-container {
+		flex-direction: column; /* Ako je ekran manji, tablica i slika idu jedan ispod drugog */
+		align-items: center;
+	}
+	table {
+		width: 100%; /* Tablica zauzima cijelu širinu na manjim ekranima */
+	}
+	aside {
+		width: 80%; /* Slika zauzima veću širinu na manjim ekranima */
+	}
+}
+
+@media (max-width: 768px) {
+	aside {
+		width: 100%; /* Na ekranima manjih od 768px, slika zauzima cijeli prostor */
+	}
+}
+
+section, article {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center; 
+    }
+
+    .dropdown-content {
+        width: 100px; 
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+        width: 95%;
+    }
+
+    
+}
+
+.movies-score{
+    font-size: 15px;
+    padding-block: 8px;
+    border-block: 1px solid;
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    user-select: none;
+   
+}
+
+.movies-score ul{
+    list-style: none;
+    display: flex;
+    flex-shrink: 0;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+}
+
+.movie-name{
+    font-weight: bold;
+}
+
+.movie-grade{
+    font-weight: bold;
+    color: green;
+}
+
+@keyframes scroll{
+    to{
+        transform: translateX(-100%);
+    }
+} 

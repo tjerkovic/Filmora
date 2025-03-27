@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body {
+  font-family: 'Abel', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(85, 85, 85, 0.8);
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #777;
+}
+
+.hamburger:hover + ul,
+nav ul:hover {
+  display: block;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a.image-popup-vertical-fit {
+  cursor: -webkit-zoom-in;
+}
+
+.galerija {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Naslov */
+.galerija h1 {
+  font-size: 2rem;
+  color: darkblue;
+  margin-bottom: 20px;  /* Razmak između naslova i slika */
+  text-align: center;
+}
+
+/* Postavljanje slika u grid sa 4 stupca */
+.slike {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 stupca */
+  gap: 15px; /* Razmak između slika */
+  margin-top: 20px; /* Malo razmaka iznad slika */
+}
+
+/* Stil za svaku sliku */
+.galerija_slika {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Stil za hover efekt */
+.galerija_slika:hover {
+  transform: scale(1.05);
+}
+
+/* Stil za slike */
+.galerija_slika img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Responsivni dizajn za manje ekrane */
+@media (max-width: 1024px) {
+  .slike {
+    grid-template-columns: repeat(3, 1fr); /* 3 stupca */
+  }
+}
+
+@media (max-width: 768px) {
+  .slike {
+    grid-template-columns: repeat(2, 1fr); /* 2 stupca */
+  }
+}
+
+@media (max-width: 480px) {
+  .slike {
+    grid-template-columns: repeat(1, 1fr); /* 1 slika u redu */
+  }
+}
